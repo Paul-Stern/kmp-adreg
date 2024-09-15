@@ -33,6 +33,7 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 
 import kotlinproject.composeapp.generated.resources.Res
 import kotlinproject.composeapp.generated.resources.compose_multiplatform
+import org.jetbrains.compose.resources.stringResource
 
 @Composable
 @Preview
@@ -46,6 +47,7 @@ fun App() {
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
+            Text(text = "Авторизация")
             LoginField()
             PasswordTextField()
         }
@@ -58,7 +60,8 @@ fun LoginField() {
     var login by remember { mutableStateOf("") }
     TextField(
         value = login,
-        onValueChange = {login = it}
+        onValueChange = {login = it},
+        label = {Text("Ваш логин")}
     )
 }
 
@@ -70,6 +73,7 @@ fun PasswordTextField() {
     TextField(
         value = passHidden,
         onValueChange = {passHidden = it},
+        label = { Text("Ваш пароль") },
         keyboardOptions = KeyboardOptions(
             keyboardType = KeyboardType.Password,
         ),
