@@ -23,6 +23,7 @@ import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.TextFieldValue
@@ -49,7 +50,10 @@ fun App() {
         ) {
             Text(text = "Авторизация")
             LoginField()
-            PasswordTextField()
+            PasswordTextField(
+                value = pass,
+                onValueChange = {pass = it}
+            )
         }
     }
 }
@@ -61,20 +65,30 @@ fun LoginField() {
     TextField(
         value = login,
         onValueChange = {login = it},
-        label = {Text("Ваш логин")}
+        label = {Text("Ваш логин")},
+        singleLine = true,
+        keyboardOptions = KeyboardOptions(
+            imeAction = ImeAction.Next,
+            keyboardType = KeyboardType.Email
+        )
     )
 }
 
 @Preview
 @Composable
-fun PasswordTextField() {
-    var passHidden by rememberSaveable{ mutableStateOf("") }
+fun PasswordTextField(
+    value: String,
+    onValueChange: (String) -> Unit,
+    ) {
+//    var passHidden by rememberSaveable{ mutableStateOf("") }
     val isPasswordVisible = remember { mutableStateOf(false) }
     TextField(
-        value = passHidden,
-        onValueChange = {passHidden = it},
+        value = value,
+        onValueChange = { onValueChange(it)},
         label = { Text("Ваш пароль") },
+        singleLine = true,
         keyboardOptions = KeyboardOptions(
+            imeAction = ImeAction.Done,
             keyboardType = KeyboardType.Password,
         ),
         visualTransformation = when (isPasswordVisible.value) {
