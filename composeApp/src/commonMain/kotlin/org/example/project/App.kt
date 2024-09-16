@@ -34,13 +34,7 @@ import kotlinproject.composeapp.generated.resources.compose_multiplatform
 fun App() {
     MaterialTheme {
         var showContent by remember { mutableStateOf(false) }
-        var login by remember { mutableStateOf("") }
-        var pass by remember { mutableStateOf("") }
-        Column(
-            Modifier.fillMaxHeight().fillMaxWidth(),
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.Center) {
-            /*
+        Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
             Button(onClick = { showContent = !showContent }) {
                 Text("Click me!")
             }
@@ -51,36 +45,6 @@ fun App() {
                     Text("Compose: $greeting")
                 }
             }
-            */
-            TextField(
-                value = login,
-                onValueChange = { login = it },
-            )
-            Spacer(Modifier.height(16.dp))
-            PasswordTextField()
-            /*
-            BasicSecureTextField(
-                value = pass,
-                onValueChange = { pass = it },
-            )
-             */
-        //            TextField()
         }
     }
-}
-
-@Preview
-@Composable
-fun LoginField() {
-    var login by remember { mutableStateOf("") }
-}
-
-@Preview
-@Composable
-fun PasswordTextField() {
-    var passHidden by rememberSaveable{ mutableStateOf("") }
-    BasicSecureTextField(
-        value = passHidden,
-        onValueChange = {passHidden = it},
-    )
 }
