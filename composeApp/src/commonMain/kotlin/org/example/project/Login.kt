@@ -16,7 +16,10 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Preview
 @Composable
-fun LoginField() {
+fun LoginField(
+    value: String,
+    onValueChange: (String) -> Unit,
+) {
     var login by remember { mutableStateOf("") }
     TextField(
         value = login,
@@ -32,7 +35,7 @@ fun LoginField() {
 
 @Preview
 @Composable
-fun PasswordTextField(
+fun PasswordField(
     value: String,
     onValueChange: (String) -> Unit,
 ) {
