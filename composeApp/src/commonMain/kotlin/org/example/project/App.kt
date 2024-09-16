@@ -12,11 +12,12 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import org.example.project.ui.view_model.LoginState
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
 @Preview
 
 fun App() {
-    LoginScreen()
+    LoginScreen(LoginState())
 }

@@ -7,17 +7,28 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import org.example.project.ui.view_model.LoginState
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
 @Preview
-fun LoginScreen() {
+fun LoginScreen(
+    state: LoginState,
+    navigateToMain: () -> Unit,
+) {
+    LaunchedEffect(state.navigateToMain) {
+        if (state.navigateToMain) {
+            navigateToMain()
+        }
+    }
+
     MaterialTheme {
         var showContent by remember { mutableStateOf(false) }
         var login by remember { mutableStateOf("") }
