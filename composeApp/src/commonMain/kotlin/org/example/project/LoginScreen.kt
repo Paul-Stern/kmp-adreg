@@ -31,6 +31,9 @@ import org.example.project.ui.view_model.LoginState
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.currentBackStackEntryAsState
+import androidx.navigation.compose.rememberNavController
 
 // Taken from:
 // https://github.com/JetBrains/compose-multiplatform/blob/a6961385ccf0dee7b6d31e3f73d2c8ef91005f1a/examples/nav_cupcake/composeApp/src/commonMain/kotlin/org/jetbrains/nav_cupcake/CupcakeScreen.kt#L50
@@ -39,6 +42,23 @@ enum class RegistryScreen (val title: StringResource) {
     Start(title = Res.string.app_name),
     Login(title = Res.string.login_screen),
     Registry(title = Res.string.registry)
+}
+
+// Taken from
+// https://github.com/JetBrains/compose-multiplatform/blob/a6961385ccf0dee7b6d31e3f73d2c8ef91005f1a/examples/nav_cupcake/composeApp/src/commonMain/kotlin/org/jetbrains/nav_cupcake/CupcakeScreen.kt#L89
+
+@Composable
+fun RegistryApp(
+//    navController:
+    navController: NavHostController = rememberNavController()
+) {
+    // Get current back stack entry
+    val backStackEntry by navController.currentBackStackEntryAsState()
+    // Get the name of the current screen
+    val currentScreen = RegistryScreen.valueOf(
+        backStackEntry?.destination?.route ?: RegistryScreen.Start.name
+    )
+
 }
 
 @Composable
