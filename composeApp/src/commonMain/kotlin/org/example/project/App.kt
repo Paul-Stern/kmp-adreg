@@ -19,5 +19,5 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 @Preview
 
 fun App() {
-    LoginScreen(LoginState())
+    LoginScreen(LoginState()) // TODO: Implement navigateToMain():
 }

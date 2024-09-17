@@ -21,11 +21,11 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 @Preview
 fun LoginScreen(
     state: LoginState,
-    navigateToMain: () -> Unit,
+//    navigateToMain: () -> Unit,
 ) {
     LaunchedEffect(state.navigateToMain) {
         if (state.navigateToMain) {
-            navigateToMain()
+//             navigateToMain() // TODO: Wait until implemented in App.kt
         }
     }
 
