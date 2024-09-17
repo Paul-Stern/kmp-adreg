@@ -21,6 +21,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import kotlinproject.composeapp.generated.resources.Res
+import kotlinproject.composeapp.generated.resources.auth
 import kotlinproject.composeapp.generated.resources.login
 import kotlinproject.composeapp.generated.resources.password
 import org.example.project.ui.view_model.LoginState
@@ -48,7 +49,7 @@ fun LoginScreen(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
-            Text(text = "Авторизация")
+            Text(text = stringResource(Res.string.auth))
             LoginField(
                 value = login,
                 onValueChange = { login = it }

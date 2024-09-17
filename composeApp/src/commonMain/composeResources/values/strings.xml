@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="company">Ярославская обл. клиническая больница</string>
+    <string name="auth">Авторизация</string>
     <string name="login">Ваш логин</string>
     <string name="password">Ваш пароль</string>
 </resources>
