@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login">Ваш логин</string>
+    <string name="password">Ваш пароль</string>
+</resources>

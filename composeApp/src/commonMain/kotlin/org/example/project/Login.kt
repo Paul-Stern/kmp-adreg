@@ -11,6 +11,13 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import org.jetbrains.compose.resources.ExperimentalResourceApi
+import kotlinproject.composeapp.generated.resources.Res
+import kotlinproject.composeapp.generated.resources.login
+import kotlinproject.composeapp.generated.resources.password
+import org.jetbrains.compose.resources.StringResource
+import org.jetbrains.compose.resources.stringResource
+//import org.jetbrains.compose.resources
 
 @Preview
 @Composable
@@ -21,7 +28,7 @@ fun LoginField(
     TextField(
         value = value,
         onValueChange = { onValueChange(it)},
-        label = { Text("Ваш логин") },
+        label = { Text(stringResource(resource = Res.string.login)) },
         singleLine = true,
         keyboardOptions = KeyboardOptions(
             imeAction = ImeAction.Next,
@@ -40,7 +47,7 @@ fun PasswordField(
     TextField(
         value = value,
         onValueChange = { onValueChange(it)},
-        label = { Text("Ваш пароль") },
+        label = { Text(stringResource(resource = Res.string.password)) },
         singleLine = true,
         keyboardOptions = KeyboardOptions(
             imeAction = ImeAction.Done,
@@ -52,3 +59,4 @@ fun PasswordField(
         }
     )
 }
+//fun stringResource(resource: StringResource): String{}
