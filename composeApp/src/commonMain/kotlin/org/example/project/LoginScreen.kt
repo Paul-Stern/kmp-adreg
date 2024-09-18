@@ -48,20 +48,6 @@ enum class RegistryScreen (val title: StringResource) {
 // https://github.com/JetBrains/compose-multiplatform/blob/a6961385ccf0dee7b6d31e3f73d2c8ef91005f1a/examples/nav_cupcake/composeApp/src/commonMain/kotlin/org/jetbrains/nav_cupcake/CupcakeScreen.kt#L89
 
 @Composable
-fun RegistryApp(
-//    navController:
-    navController: NavHostController = rememberNavController()
-) {
-    // Get current back stack entry
-    val backStackEntry by navController.currentBackStackEntryAsState()
-    // Get the name of the current screen
-    val currentScreen = RegistryScreen.valueOf(
-        backStackEntry?.destination?.route ?: RegistryScreen.Login.name
-    )
-
-}
-
-@Composable
 @Preview
 fun LoginScreen(
     state: LoginState,
