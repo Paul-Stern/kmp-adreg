@@ -30,7 +30,10 @@ fun App() {
     MaterialTheme {
         val navigator = rememberNavController()
 
-        Box(modifier = Modifier.fillMaxSize()) {
+        Box(
+            modifier = Modifier.fillMaxSize(),
+            contentAlignment = Alignment.Center
+        ) {
 //            healthcareSplash(
 //                resource = imageResource(Res.drawable)
 //            )
