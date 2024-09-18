@@ -39,7 +39,7 @@ import androidx.navigation.compose.rememberNavController
 // https://github.com/JetBrains/compose-multiplatform/blob/a6961385ccf0dee7b6d31e3f73d2c8ef91005f1a/examples/nav_cupcake/composeApp/src/commonMain/kotlin/org/jetbrains/nav_cupcake/CupcakeScreen.kt#L50
 
 enum class RegistryScreen (val title: StringResource) {
-    Start(title = Res.string.app_name),
+//    Start(title = Res.string.app_name),
     Login(title = Res.string.login_screen),
     Registry(title = Res.string.registry)
 }
@@ -56,7 +56,7 @@ fun RegistryApp(
     val backStackEntry by navController.currentBackStackEntryAsState()
     // Get the name of the current screen
     val currentScreen = RegistryScreen.valueOf(
-        backStackEntry?.destination?.route ?: RegistryScreen.Start.name
+        backStackEntry?.destination?.route ?: RegistryScreen.Login.name
     )
 
 }
@@ -66,17 +66,25 @@ fun RegistryApp(
 fun LoginScreen(
     state: LoginState,
 //    navigateToMain: () -> Unit,
+    navController: NavHostController = rememberNavController()
 ) {
+    // Get current back stack entry
+    val backStackEntry by navController.currentBackStackEntryAsState()
+    // Get the name of the current screen
+    val currentScreen = RegistryScreen.valueOf(
+        backStackEntry?.destination?.route ?: RegistryScreen.Login.name
+    )
+
     LaunchedEffect(state.navigateToMain) {
         if (state.navigateToMain) {
 //             navigateToMain() // TODO: Wait until implemented in App.kt
         }
     }
 
+    var showContent by remember { mutableStateOf(false) }
+    var login by remember { mutableStateOf("") }
+    var pass by remember { mutableStateOf("") }
     MaterialTheme {
-        var showContent by remember { mutableStateOf(false) }
-        var login by remember { mutableStateOf("") }
-        var pass by remember { mutableStateOf("") }
         Column(
             Modifier.fillMaxHeight().fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally,
