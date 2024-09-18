@@ -9,9 +9,16 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
+import kotlinproject.composeapp.generated.resources.Res
+import kotlinproject.composeapp.generated.resources.app_name
+import kotlinproject.composeapp.generated.resources.compose_multiplatform
 import org.example.project.ui.view_model.LoginState
+import org.jetbrains.compose.resources.DrawableResource
+import org.jetbrains.compose.resources.imageResource
+import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
@@ -24,7 +31,17 @@ fun App() {
         val navigator = rememberNavController()
 
         Box(modifier = Modifier.fillMaxSize()) {
-
+//            healthcareSplash(
+//                resource = imageResource(Res.drawable)
+//            )
+            Text(text = stringResource(Res.string.app_name))
         }
     }
 }
+/*
+@Composable
+fun healthcareSplash(resource: DrawableResource): ImageVector {
+
+}
+
+ */

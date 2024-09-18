@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="company">Ярославская обл. клиническая больница</string>
-    <string name="app_name">Журнал</string>
+    <string name="app_name">Реестр госпитализации</string>
     <string name="auth">Авторизация</string>
     <string name="login_screen">Авторизация</string>
     <string name="registry">Просмотр журнала</string>
