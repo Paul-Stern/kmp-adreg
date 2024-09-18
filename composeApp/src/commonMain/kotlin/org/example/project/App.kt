@@ -14,6 +14,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
 import kotlinproject.composeapp.generated.resources.Res
 import kotlinproject.composeapp.generated.resources.app_name
+import kotlinproject.composeapp.generated.resources.company
 import kotlinproject.composeapp.generated.resources.compose_multiplatform
 import org.example.project.ui.view_model.LoginState
 import org.jetbrains.compose.resources.DrawableResource
@@ -37,7 +38,10 @@ fun App() {
 //            healthcareSplash(
 //                resource = imageResource(Res.drawable)
 //            )
-            Text(text = stringResource(Res.string.app_name))
+            Column {
+                Text(text = stringResource(Res.string.company))
+                Text(text = stringResource(Res.string.app_name))
+            }
         }
     }
 }
