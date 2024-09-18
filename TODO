@@ -1,1 +1,3 @@
-TODO: implement navigateToMain func
+TODO: 
+ 1. create NavHostController
+ 2. add NavHost composable
