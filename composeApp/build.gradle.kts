@@ -10,6 +10,20 @@ plugins {
     id("com.google.devtools.ksp") version "2.0.20-1.0.24"
 }
 
+/*
+// see: https://github.com/google/ksp/blob/9faf2165dc393363f98948442333b88751676ffa/examples/multiplatform/build.gradle.kts#L5
+allprojects {
+    repositories {
+        mavenCentral()
+    }
+}
+// see: https://kotlinlang.org/docs/ksp-quickstart.html#add-a-processor
+repositories {
+    mavenCentral()
+}
+*/
+
+
 kotlin {
     @OptIn(ExperimentalWasmDsl::class)
     wasmJs {
@@ -49,6 +63,10 @@ kotlin {
             implementation(libs.koin.core)
             implementation("com.google.dagger:dagger-compiler:2.51.1")
 //            ksp("com.google.dagger:dagger-compiler:2.51.1")
+            implementation(kotlin("stdlib-jdk8"))
+            implementation("com.google.dagger:dagger-compiler:2.51.1")
+//            ksp("com.google.dagger:dagger-compiler:2.51.1")
+
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
