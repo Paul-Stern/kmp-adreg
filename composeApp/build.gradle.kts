@@ -6,6 +6,7 @@ plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.jetbrainsCompose)
     alias(libs.plugins.compose.compiler)
+    // see: https://kotlinlang.org/docs/ksp-quickstart.html
     id("com.google.devtools.ksp") version "2.0.20-1.0.24"
 }
 
@@ -46,6 +47,8 @@ kotlin {
 //            implementation(libs.compose.navigation)
             implementation(project.dependencies.platform(libs.koin.bom))
             implementation(libs.koin.core)
+            implementation("com.google.dagger:dagger-compiler:2.51.1")
+//            ksp("com.google.dagger:dagger-compiler:2.51.1")
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
