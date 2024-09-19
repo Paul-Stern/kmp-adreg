@@ -2,6 +2,7 @@ package org.example.project.ui.main.home
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import org.example.project.navigation.HomeNavigation
 
@@ -19,5 +20,10 @@ fun HomeNav(
         navController = navigator,
     ) {
 
+        composable(route = HomeNavigation.Home.route) {
+            // TODO: Create HomeViewModel
+//            val viewModel: HomeViewModel = TODO()
+//            HomeScreen(TODO())
+        }
     }
 }
