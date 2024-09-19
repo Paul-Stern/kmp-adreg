@@ -25,6 +25,7 @@ repositories {
 
 
 kotlin {
+    /*
     @OptIn(ExperimentalWasmDsl::class)
     wasmJs {
         moduleName = "composeApp"
@@ -42,11 +43,13 @@ kotlin {
         }
         binaries.executable()
     }
+     */
 
     jvm("desktop")
 
     sourceSets {
         val desktopMain by getting
+        val koin_annotations_version = "1.3.1"
         commonMain.dependencies {
             implementation(compose.runtime)
             implementation(compose.foundation)
@@ -66,7 +69,8 @@ kotlin {
             implementation(kotlin("stdlib-jdk8"))
             implementation("com.google.dagger:dagger-compiler:2.51.1")
 //            ksp("com.google.dagger:dagger-compiler:2.51.1")
-
+            // Koin Annotations
+            api("io.insert-koin:koin-annotations:$koin_annotations_version")
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
