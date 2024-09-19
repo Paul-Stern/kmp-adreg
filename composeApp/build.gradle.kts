@@ -72,6 +72,9 @@ kotlin {
             // Koin Annotations
             api("io.insert-koin:koin-annotations:$koin_annotations_version")
         }
+            commonMain.configure {
+                kotlin.srcDir("build/generated/ksp/metadata/commonMain/kotlin")
+            }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
             implementation(libs.kotlinx.coroutines.swing)
