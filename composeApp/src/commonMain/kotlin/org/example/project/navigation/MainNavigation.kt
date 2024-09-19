@@ -1,9 +1,9 @@
 package org.example.project.navigation
 
 sealed class MainNavigation(
-    route: String,
+    val route: String,
 ) {
     data object Home : MainNavigation (
-        route = "Home"
+        route = "Home",
     )
 }

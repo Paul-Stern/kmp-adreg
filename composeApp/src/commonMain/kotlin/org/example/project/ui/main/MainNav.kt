@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
+import org.example.project.navigation.MainNavigation
 
 @Composable
 fun MainNav(logout: () -> Unit) {
@@ -14,7 +15,7 @@ fun MainNav(logout: () -> Unit) {
     Box() {
         NavHost(
             navController = navController,
-            startDestination = TODO(),
+            startDestination = MainNavigation.Home.route,
         ) {}
     }
 }
