@@ -82,6 +82,26 @@ kotlin {
     }
 }
 
+dependencies {
+    add("kspCommonMainMetadata", libs.koin.ksp.compiler)
+    // All of the following are broken
+    /*
+    add("kspAndroid", libs.koin.ksp.compiler) // TODO: fix broken this
+    add("kspIosX64", libs.koin.ksp.compiler)
+    add("kspIosArm64", libs.koin.ksp.compiler)
+    add("kspIosSimulatorArm64", libs.koin.ksp.compiler)
+
+     */
+}
+/*
+// see: https://insert-koin.io/docs/setup/annotations#kotlin--multiplatform
+project.tasks.withType(KotlinCompilationTask::class.java).configureEach {
+    if(name != "kspCommonMainKotlinMetadata") {
+        dependsOn("kspCommonMainKotlinMetadata")
+    }
+}
+ */
+
 
 compose.desktop {
     application {
