@@ -5,25 +5,12 @@ package org.example.project
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
 import androidx.compose.runtime.*
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.navigation.NavGraph
 import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.rememberNavController
-import kotlinproject.composeapp.generated.resources.Res
-import kotlinproject.composeapp.generated.resources.app_name
-import kotlinproject.composeapp.generated.resources.company
-import kotlinproject.composeapp.generated.resources.compose_multiplatform
-import org.example.project.navigation.AppNavigation
-import org.example.project.ui.view_model.LoginState
-import org.jetbrains.compose.resources.DrawableResource
-import org.jetbrains.compose.resources.imageResource
-import org.jetbrains.compose.resources.stringResource
-import org.jetbrains.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import org.example.project.navigation.AppNavigation
 
 @Composable
 fun App() {
@@ -36,10 +23,7 @@ fun App() {
         Box(modifier = Modifier.fillMaxSize()) {
             NavHost(
                 navController = navigator,
-//                startDestination = AppNavigation.Splash.route,
-                graph = TODO()
-//                graph =
-//                modifier = Modifier.fillMaxSize(),
+                startDestination = AppNavigation.Splash.route,
             )
         }
 
