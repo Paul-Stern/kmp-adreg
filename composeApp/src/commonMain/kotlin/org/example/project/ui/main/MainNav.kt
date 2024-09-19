@@ -3,6 +3,7 @@ package org.example.project.ui.main
 import androidx.compose.foundation.layout.Box
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import org.example.project.navigation.MainNavigation
 
@@ -16,6 +17,10 @@ fun MainNav(logout: () -> Unit) {
         NavHost(
             navController = navController,
             startDestination = MainNavigation.Home.route,
-        ) {}
+        ) {
+            composable(route = MainNavigation.Home.route) {
+//                HomeNav // TODO: Create Home Nav
+            }
+        }
     }
 }
