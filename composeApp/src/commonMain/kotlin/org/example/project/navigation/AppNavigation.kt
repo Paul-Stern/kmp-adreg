@@ -27,5 +27,9 @@ sealed class AppNavigation(
         route = "Login",
         arguments = emptyList()
     )
+    data object Main : AppNavigation(
+        route = "Main",
+        arguments = emptyList(),
+    )
 }
 

@@ -12,6 +12,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import org.example.project.navigation.AppNavigation
+import org.example.project.ui.splash.SplashNav
 
 @Composable
 fun App() {
@@ -29,35 +30,15 @@ fun App() {
             ) {
                 composable(route = AppNavigation.Splash.route) {
 //                    SplashNav // TODO:
+                    SplashNav(
+                        navigateToMain = {
+                            navigator.popBackStack()
+//                            navigator.navigate(AppNavigation.Login.route)
+                            navigator.navigate(AppNavigation.Main.route)
+                        }
+                    )
                 }
             }
         }
-
-//         */
-
-//        SplashScreen()
-        /*
-            Box(
-                modifier = Modifier.fillMaxSize(),
-                contentAlignment = Alignment.Center
-            ) {
-        //            healthcareSplash(
-        //                resource = imageResource(Res.drawable)
-        //            )
-                Column {
-                    Text(text = stringResource(Res.string.company))
-                    Text(text = stringResource(Res.string.app_name))
-                }
-            }
-         */
     }
-
 }
-
-/*
-@Composable
-fun healthcareSplash(resource: DrawableResource): ImageVector {
-
-}
-
- */
