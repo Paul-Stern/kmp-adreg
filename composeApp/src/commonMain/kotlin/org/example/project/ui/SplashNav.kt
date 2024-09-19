@@ -12,7 +12,7 @@ import org.example.project.ui.view_model.LoginViewModel
 
 @Composable
 internal fun SplashNav(
-    viewModel: LoginViewModel,
+//    viewModel: LoginViewModel = koinViewModel(), //TODO: Fix deps
     navigateToMain: () -> Unit,
 ) {
     val navigator = rememberNavController()
@@ -24,6 +24,7 @@ internal fun SplashNav(
         composable(SplashNavigation.Splash.route) {
             // TODO: implement LoginViewModel
             // See: https://github.com/razaghimahdi/Shopping-By-KMP/blob/fe055734130d24461c6340f104666a083f7413a1/shared/src/commonMain/kotlin/presentation/ui/splash/SplashNav.kt#L27C1-L27C47
+            /*
              SplashScreen(
                  viewModel.state.value,
                  navigateToMain = navigateToMain,
@@ -32,6 +33,7 @@ internal fun SplashNav(
                      navigator.navigate(SplashNavigation.Login.route)
                  }
                  ) // TODO
+             */
 
 
         }
