@@ -23,9 +23,9 @@ import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.imageResource
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.composable
 
 @Composable
-@Preview
 fun App() {
 //    LoginScreen(LoginState()) // TODO: Implement navigateToMain():
     // TODO: Complete splash screen
@@ -33,20 +33,19 @@ fun App() {
     MaterialTheme {
         val navigator = rememberNavController()
 
-        /*
         Box(modifier = Modifier.fillMaxSize()) {
             NavHost(
                 navController = navigator,
-                graph = AppNavigation.Splash
-
+//                startDestination = AppNavigation.Splash.route,
+                graph = TODO()
 //                graph =
 //                modifier = Modifier.fillMaxSize(),
             )
         }
 
-         */
+//         */
 
-        SplashScreen()
+//        SplashScreen()
         /*
             Box(
                 modifier = Modifier.fillMaxSize(),

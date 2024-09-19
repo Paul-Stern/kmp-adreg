@@ -24,19 +24,15 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 @Composable
 @Preview
 internal fun SplashScreen(
-//    state: LoginState,
+    state: LoginState,
 //    events: (LoginEvent) -> Unit,
 //    navigateToMain: () -> Unit,
-//    navigateToLogin: () -> Unit,
+    navigateToLogin: () -> Unit,
 ) {
-//    LaunchedEffect(state.navigateToMain) {
-//        delay(3000L)
-//        if (state.navigateToMain) {
-//            navigateToMain()
-//        } else {
-//            navigateToLogin()
-//        }
-//    }
+    LaunchedEffect(state.navigateToMain) {
+        delay(3000L)
+        navigateToLogin()
+    }
     MaterialTheme {
         val navigator = rememberNavController()
 
