@@ -26,9 +26,9 @@ kotlin {
         }
         binaries.executable()
     }
-    
+
     jvm("desktop")
-    
+
     sourceSets {
         val desktopMain by getting
         commonMain.dependencies {
@@ -43,6 +43,8 @@ kotlin {
             implementation(libs.androidx.lifecycle.runtime.compose)
             implementation("org.jetbrains.androidx.navigation:navigation-compose:2.7.0-alpha07")
 //            implementation(libs.compose.navigation)
+            implementation(project.dependencies.platform(libs.koin.bom))
+            implementation(libs.koin.core)
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
