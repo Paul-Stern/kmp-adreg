@@ -23,7 +23,7 @@ fun HomeNav(
         composable(route = HomeNavigation.Home.route) {
             // TODO: Create HomeViewModel
 //            val viewModel: HomeViewModel = TODO()
-//            HomeScreen(TODO())
+            HomeScreen()
         }
     }
 }

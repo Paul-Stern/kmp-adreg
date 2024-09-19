@@ -7,6 +7,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import org.example.project.navigation.SplashNavigation
+import org.example.project.ui.SplashScreen
 
 @Composable
 internal fun SplashNav(
@@ -19,6 +20,8 @@ internal fun SplashNav(
         startDestination = SplashNavigation.Splash.route
     ) {
         composable(SplashNavigation.Splash.route) {
+            // TODO: implement LoginViewModel
+            // See: https://github.com/razaghimahdi/Shopping-By-KMP/blob/fe055734130d24461c6340f104666a083f7413a1/shared/src/commonMain/kotlin/presentation/ui/splash/SplashNav.kt#L27C1-L27C47
             // SplashScreen(TODO()) // TODO
         }
     }

@@ -6,6 +6,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import org.example.project.navigation.MainNavigation
+import org.example.project.ui.main.home.HomeNav
 
 @Composable
 fun MainNav(logout: () -> Unit) {
@@ -20,6 +21,7 @@ fun MainNav(logout: () -> Unit) {
         ) {
             composable(route = MainNavigation.Home.route) {
 //                HomeNav // TODO: Create Home Nav
+                HomeNav(logout = logout)
             }
         }
     }
