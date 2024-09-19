@@ -23,7 +23,8 @@ fun App() {
         Box(modifier = Modifier.fillMaxSize()) {
             NavHost(
                 navController = navigator,
-                startDestination = AppNavigation.Splash.route,
+//                startDestination = AppNavigation.Splash.route, // Fix: unknown parameter
+                graph = TODO()
             )
         }
 
