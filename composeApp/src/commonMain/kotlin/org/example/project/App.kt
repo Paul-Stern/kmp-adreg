@@ -6,6 +6,7 @@ import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -23,8 +24,8 @@ fun App() {
         Box(modifier = Modifier.fillMaxSize()) {
             NavHost(
                 navController = navigator,
-//                startDestination = AppNavigation.Splash.route, // Fix: unknown parameter
-                graph = TODO()
+                startDestination = AppNavigation.Splash.route, // Fix: unknown parameter
+                modifier = Modifier.fillMaxSize()
             )
         }
 
