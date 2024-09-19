@@ -38,6 +38,14 @@ fun App() {
                         }
                     )
                 }
+                composable(route = AppNavigation.Main.route) {
+                    /*
+                    MainNav { // TODO: implement it
+                        navigator.popBackStack()
+                        navigator.navigate(AppNavigation.Splash.route)
+                    }
+                     */
+                }
             }
         }
     }
