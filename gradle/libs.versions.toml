@@ -9,6 +9,7 @@ koin-bom = "4.0.0"
 koin-annotations = "1.3.1"
 ktor = "3.0.0-rc-1"
 ksp = "2.0.20-1.0.24"
+kotlin-android = "1.8.0"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -30,3 +31,5 @@ koin-ksp-compiler = { module = "io.insert-koin:koin-ksp-compiler"}
 jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin-android"}
+#jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android"}
