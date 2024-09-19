@@ -26,7 +26,11 @@ fun App() {
                 navController = navigator,
                 startDestination = AppNavigation.Splash.route, // Fix: unknown parameter
                 modifier = Modifier.fillMaxSize()
-            )
+            ) {
+                composable(route = AppNavigation.Splash.route) {
+//                    SplashNav // TODO:
+                }
+            }
         }
 
 //         */
