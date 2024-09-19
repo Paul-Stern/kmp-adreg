@@ -12,12 +12,13 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import org.example.project.navigation.AppNavigation
+import org.example.project.ui.splash.SplashNav
 
 @Composable
 fun App() {
 //    LoginScreen(LoginState()) // TODO: Implement navigateToMain():
     // TODO: Complete splash screen
-    // SEE: SpashScreen.kt file
+    // SEE: SplashScreen.kt file
     MaterialTheme {
         val navigator = rememberNavController()
 
@@ -29,6 +30,13 @@ fun App() {
             ) {
                 composable(route = AppNavigation.Splash.route) {
 //                    SplashNav // TODO:
+                    SplashNav(
+                        navigateToMain = {
+                            navigator.popBackStack()
+//                            navigator.navigate(AppNavigation.Login.route)
+//                            navigator.navigate(AppNavigation.Main.route) // TODO: Create Main route
+                        }
+                    )
                 }
             }
         }
