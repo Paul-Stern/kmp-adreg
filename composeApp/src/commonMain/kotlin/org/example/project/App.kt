@@ -30,6 +30,7 @@ fun App() {
             ) {
                 composable(route = AppNavigation.Splash.route) {
 //                    SplashNav // TODO:
+                    /*
                     SplashNav(
                         navigateToMain = {
                             navigator.popBackStack()
@@ -37,6 +38,8 @@ fun App() {
                             navigator.navigate(AppNavigation.Main.route)
                         }
                     )
+                    `
+                     */
                 }
                 composable(route = AppNavigation.Main.route) {
                     /*
