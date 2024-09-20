@@ -30,7 +30,7 @@ internal fun App() {
     KoinApplication(application = {
         modules()
     }) {
-    // paired with LN64
+        // paired with LN64
     }
 //    LoginScreen(LoginState()) // TODO: Implement navigateToMain():
     // TODO: Complete splash screen
@@ -45,21 +45,21 @@ internal fun App() {
                 modifier = Modifier.fillMaxSize()
             ) {
                 composable(route = AppNavigation.Splash.route) {
-                SplashNav(
-                    navigateToMain = {
-                        navigator.popBackStack()
+                    SplashNav(
+                        navigateToMain = {
+                            navigator.popBackStack()
 //                            navigator.navigate(AppNavigation.Login.route)
-                        navigator.navigate(AppNavigation.Main.route)
-                    }
-                )
+                            navigator.navigate(AppNavigation.Main.route)
+                        }
+                    )
 
 //                 */
                 }
                 composable(route = AppNavigation.Main.route) {
-                MainNav { // TODO: implement it
-                    navigator.popBackStack()
-                    navigator.navigate(AppNavigation.Splash.route)
-                }
+                    MainNav { // TODO: implement it
+                        navigator.popBackStack()
+                        navigator.navigate(AppNavigation.Splash.route)
+                    }
                 }
             }
         }
