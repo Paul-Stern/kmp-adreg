@@ -82,6 +82,7 @@ kotlin {
             api(libs.koin.core)
             api(libs.koin.annotations)
             implementation(libs.koin.compose)
+            implementation(libs.koin.compose.viewmodel.navigation)
             implementation(kotlin("stdlib-jdk8"))
             // Koin Annotations KSP Compiler
             implementation("com.google.devtools.ksp:symbol-processing-api:$kspVersion")
