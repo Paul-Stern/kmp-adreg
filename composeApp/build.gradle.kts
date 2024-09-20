@@ -49,6 +49,16 @@ kotlin {
         binaries.executable()
     }
      */
+    /*
+    js(IR) {
+        binaries.executable()
+    }
+    error:
+    Could not resolve all artifacts for configuration ':composeApp:jsCompileClasspath'.
+> Could not resolve com.google.devtools.ksp:symbol-processing-api:2.0.20-1.0.25.
+  Required by:
+      project :composeApp
+     */
 
     jvm("desktop")
 
