@@ -3,4 +3,5 @@ TODO:
  2. Add its deps if needed
  3. Use SplashScreen (and other screens) calls
  4. Create viewModelModule in Koin
- 5. Add context to KoinApplication in app --<
+ 5. Add context to KoinApplication in app
+ 6. Create context param for App fun --<
