@@ -8,12 +8,15 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.window.application
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import di.appModule
 import org.example.project.navigation.AppNavigation
 import org.example.project.ui.splash.SplashNav
 import org.koin.compose.KoinApplication
+import org.koin.core.context.KoinContext
 import org.koin.dsl.koinApplication
 
 fun koinConfiguration() = koinApplication {
@@ -21,9 +24,13 @@ fun koinConfiguration() = koinApplication {
 }
 
 @Composable
-fun App() {
+internal fun App(context: KoinContext) {
     // see: https://insert-koin.io/docs/reference/koin-compose/compose/#koin-compose-multiplatform-vs-koin-android-jetpack-compose
-//    KoinApplication(::koinConfiguration) { // paired with LN64
+    KoinApplication(application = {
+        modules(appModule(context))
+    }) {
+    // paired with LN64
+    }
 //    LoginScreen(LoginState()) // TODO: Implement navigateToMain():
     // TODO: Complete splash screen
     // SEE: SpashScreen.kt file
