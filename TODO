@@ -1,5 +1,5 @@
 TODO:
  1. Create viewModel with koin with Nav
  2. Add its deps if needed
- 3. Use SplashScreen (and other screens) calls
- 4. Create viewModelModule in Koin --<
+ 3. Use SplashScreen (and other screens) calls --<
+ 4. Create viewModelModule in Koin 
