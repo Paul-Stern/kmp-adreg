@@ -3,6 +3,8 @@ import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompilationTask
 
+val kspVersion: String by project
+
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.jetbrainsCompose)
@@ -73,6 +75,7 @@ kotlin {
             implementation("com.google.dagger:dagger-compiler:2.51.1")
 //            ksp("com.google.dagger:dagger-compiler:2.51.1")
             // Koin Annotations KSP Compiler
+            implementation("com.google.devtools.ksp:symbol-processing-api:$kspVersion")
 //            ksp("io.insert-koin:koin-ksp-compiler:$koin_annotations_version")
 //            implementation("com.google.dagger:dagger-compiler:2.51.1")
 //            ksp("com.google.dagger:dagger-compiler:2.51.1")
