@@ -31,7 +31,7 @@ fun koinConfiguration() = koinApplication {
 internal fun App() {
     // see: https://insert-koin.io/docs/reference/koin-compose/compose/#koin-compose-multiplatform-vs-koin-android-jetpack-compose
     KoinApplication(application = {
-        modules(appModule(TODO())) // TODO: add context
+        modules(appModule(null)) // TODO: add context
     }) {
         // paired with LN64
     }
