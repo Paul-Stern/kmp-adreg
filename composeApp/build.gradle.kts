@@ -6,7 +6,6 @@ plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.jetbrainsCompose)
     alias(libs.plugins.compose.compiler)
-    alias(libs.plugins.jetbrainsKotlinAndroid)
     // see: https://kotlinlang.org/docs/ksp-quickstart.html
     id("com.google.devtools.ksp") version "2.0.20-1.0.24"
 }
