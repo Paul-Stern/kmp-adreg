@@ -62,15 +62,17 @@ kotlin {
             implementation(libs.androidx.lifecycle.runtime.compose)
             implementation("org.jetbrains.androidx.navigation:navigation-compose:2.7.0-alpha07")
 //            implementation(libs.compose.navigation)
+            // Koin:
             implementation(project.dependencies.platform(libs.koin.bom))
             implementation(libs.koin.core)
+            api(libs.koin.annotations)
             implementation("com.google.dagger:dagger-compiler:2.51.1")
 //            ksp("com.google.dagger:dagger-compiler:2.51.1")
             implementation(kotlin("stdlib-jdk8"))
             implementation("com.google.dagger:dagger-compiler:2.51.1")
 //            ksp("com.google.dagger:dagger-compiler:2.51.1")
             // Koin Annotations
-            api("io.insert-koin:koin-annotations:$koin_annotations_version")
+//            api("io.insert-koin:koin-annotations:$koin_annotations_version")
         }
             commonMain.configure {
                 kotlin.srcDir("build/generated/ksp/metadata/commonMain/kotlin")
