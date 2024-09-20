@@ -1,13 +1,16 @@
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompilationTask
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.jetbrainsCompose)
     alias(libs.plugins.compose.compiler)
     // see: https://kotlinlang.org/docs/ksp-quickstart.html
-    id("com.google.devtools.ksp") version "2.0.20-1.0.24"
+    alias(libs.plugins.ksp)
+//    id("com.google.devtools.ksp") version "2.0.20-1.0.24"
+//    kotlin("jvm")
 }
 
 /*
@@ -66,10 +69,12 @@ kotlin {
             implementation(project.dependencies.platform(libs.koin.bom))
             implementation(libs.koin.core)
             api(libs.koin.annotations)
-            implementation("com.google.dagger:dagger-compiler:2.51.1")
-//            ksp("com.google.dagger:dagger-compiler:2.51.1")
             implementation(kotlin("stdlib-jdk8"))
             implementation("com.google.dagger:dagger-compiler:2.51.1")
+//            ksp("com.google.dagger:dagger-compiler:2.51.1")
+            // Koin Annotations KSP Compiler
+//            ksp("io.insert-koin:koin-ksp-compiler:$koin_annotations_version")
+//            implementation("com.google.dagger:dagger-compiler:2.51.1")
 //            ksp("com.google.dagger:dagger-compiler:2.51.1")
             // Koin Annotations
 //            api("io.insert-koin:koin-annotations:$koin_annotations_version")
@@ -82,6 +87,7 @@ kotlin {
             implementation(libs.kotlinx.coroutines.swing)
         }
     }
+
 }
 
 dependencies {

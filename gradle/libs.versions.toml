@@ -7,6 +7,8 @@ kotlinx-coroutines = "1.8.1"
 compose-navigation = "2.8.0-alpha10"
 koin-bom = "4.0.0"
 koin-annotations = "1.3.1"
+koin-annotations-bom = "1.3.1"
+koin-ksp-compiler = "1.3.1"
 ktor = "3.0.0-rc-1"
 ksp = "2.0.20-1.0.24"
 kotlin-android = "2.0.0"
@@ -47,6 +49,7 @@ kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref =
 #jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin-android"}
 jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin"}
 #jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android"}
+ksp = {id = "com.google.devtools.ksp", version.ref = "ksp" }
 
 [bundles]
 #material = ["material-icons", "material-iconsExtended", "material", "material3"]
