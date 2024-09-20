@@ -14,6 +14,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import di.appModule
 import org.example.project.navigation.AppNavigation
+import org.example.project.ui.main.MainNav
 import org.example.project.ui.splash.SplashNav
 import org.koin.compose.KoinApplication
 import org.koin.core.context.KoinContext
@@ -45,7 +46,7 @@ internal fun App() {
             ) {
                 composable(route = AppNavigation.Splash.route) {
 //                    SplashNav // TODO:
-                    /*
+//                    /*
                 SplashNav(
                     navigateToMain = {
                         navigator.popBackStack()
@@ -53,16 +54,16 @@ internal fun App() {
                         navigator.navigate(AppNavigation.Main.route)
                     }
                 )
-                `
-                 */
+
+//                 */
                 }
                 composable(route = AppNavigation.Main.route) {
-                    /*
+//                    /*
                 MainNav { // TODO: implement it
                     navigator.popBackStack()
                     navigator.navigate(AppNavigation.Splash.route)
                 }
-                 */
+//                 */
                 }
             }
         }
