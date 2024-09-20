@@ -45,8 +45,6 @@ internal fun App() {
                 modifier = Modifier.fillMaxSize()
             ) {
                 composable(route = AppNavigation.Splash.route) {
-//                    SplashNav // TODO:
-//                    /*
                 SplashNav(
                     navigateToMain = {
                         navigator.popBackStack()
@@ -58,12 +56,10 @@ internal fun App() {
 //                 */
                 }
                 composable(route = AppNavigation.Main.route) {
-//                    /*
                 MainNav { // TODO: implement it
                     navigator.popBackStack()
                     navigator.navigate(AppNavigation.Splash.route)
                 }
-//                 */
                 }
             }
         }

@@ -1,2 +1,4 @@
 TODO:
- 1. Add context for appModule koin
+ 1. Create viewModel with koin with Nav
+ 2. Add its deps if needed
+ 3. Use SplashScreen (and other screens) calls
