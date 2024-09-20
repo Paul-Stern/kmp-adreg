@@ -69,16 +69,12 @@ kotlin {
 //            implementation(libs.compose.navigation)
             // Koin:
             implementation(project.dependencies.platform(libs.koin.bom))
-            implementation(libs.koin.core)
+            api(libs.koin.core)
             api(libs.koin.annotations)
+            implementation(libs.koin.compose)
             implementation(kotlin("stdlib-jdk8"))
-            implementation("com.google.dagger:dagger-compiler:2.51.1")
-//            ksp("com.google.dagger:dagger-compiler:2.51.1")
             // Koin Annotations KSP Compiler
             implementation("com.google.devtools.ksp:symbol-processing-api:$kspVersion")
-//            ksp("io.insert-koin:koin-ksp-compiler:$koin_annotations_version")
-//            implementation("com.google.dagger:dagger-compiler:2.51.1")
-//            ksp("com.google.dagger:dagger-compiler:2.51.1")
             // Koin Annotations
 //            api("io.insert-koin:koin-annotations:$koin_annotations_version")
         }
