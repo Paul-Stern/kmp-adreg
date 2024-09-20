@@ -19,12 +19,15 @@ import org.example.project.ui.splash.SplashNav
 import org.koin.compose.KoinApplication
 import org.koin.core.context.KoinContext
 import org.koin.dsl.koinApplication
+import javax.lang.model.type.NullType
+import javax.naming.Context
 
 fun koinConfiguration() = koinApplication {
     modules()
 }
 
 @Composable
+//internal fun App(context: Context) { // TODO: Create common.context to use here
 internal fun App() {
     // see: https://insert-koin.io/docs/reference/koin-compose/compose/#koin-compose-multiplatform-vs-koin-android-jetpack-compose
     KoinApplication(application = {
