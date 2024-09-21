@@ -36,6 +36,7 @@ import kotlinproject.composeapp.generated.resources.login
 import kotlinproject.composeapp.generated.resources.login_screen
 import kotlinproject.composeapp.generated.resources.password
 import kotlinproject.composeapp.generated.resources.registry
+import org.example.project.ui.view_model.LoginEvent
 import org.jetbrains.compose.resources.painterResource
 
 // Taken from:
@@ -54,6 +55,7 @@ enum class RegistryScreen (val title: StringResource) {
 @Preview
 fun LoginScreen(
     state: LoginState,
+    events: (LoginEvent) -> Unit,
     navigateToMain: () -> Unit,
     navController: NavHostController = rememberNavController()
 ) {
@@ -85,8 +87,10 @@ fun LoginScreen(
                 onValueChange = { login = it }
             )
             PasswordField(
-                value = pass,
-                onValueChange = { pass = it }
+                value = state.passwordLogin,
+                onValueChange = {
+                    events(LoginEvent.OnUpdatePasswordLogin(it))
+                },
             )
 
         }
@@ -114,6 +118,7 @@ fun LoginField(
 fun PasswordField(
     value: String,
     onValueChange: (String) -> Unit,
+//    onDone: () -> Unit, // maybe next time
 ) {
     val isPasswordVisible = remember { mutableStateOf(false) }
     TextField(

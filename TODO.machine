@@ -1,0 +1,24 @@
+composeApp/src/commonMain/kotlin/org/example/project/ui/main/home/HomeScreen.kt:12://    val pagerState = rememberPagerState { TODO() }
+composeApp/src/commonMain/kotlin/org/example/project/ui/main/home/HomeNav.kt:24:            // TODO: Create HomeViewModel
+composeApp/src/commonMain/kotlin/org/example/project/ui/main/home/HomeNav.kt:25://            val viewModel: HomeViewModel = TODO()
+composeApp/src/commonMain/kotlin/org/example/project/ui/main/MainNav.kt:23://                HomeNav // TODO: Create Home Nav
+composeApp/src/commonMain/kotlin/org/example/project/ui/view_model/LoginViewModel.kt:9://    private val loginInteractor: LoginInteractor, // NB TODO: implement
+composeApp/src/commonMain/kotlin/org/example/project/ui/view_model/LoginViewModel.kt:10://    private val checkTokenInteractor: CheckTokenInteractor, // TODO: implement
+composeApp/src/commonMain/kotlin/org/example/project/ui/SplashScreen.kt:29:    // TODO: fix state!
+composeApp/src/commonMain/kotlin/org/example/project/LoginScreen.kt:71:             navigateToMain() // TODO: Wait until implemented in App.kt
+composeApp/src/commonMain/kotlin/org/example/project/LoginScreen.kt:150:                           tint = MaterialTheme.colorScheme.surfaceTint // TODO: choose a color
+composeApp/src/commonMain/kotlin/org/example/project/App.kt:29://internal fun App(context: Context) { // TODO: Create common.context to use here
+composeApp/src/commonMain/kotlin/org/example/project/App.kt:40://    LoginScreen(LoginState()) // TODO: Implement navigateToMain():
+composeApp/src/commonMain/kotlin/org/example/project/App.kt:41:        // TODO: Complete splash screen
+composeApp/src/commonMain/kotlin/org/example/project/App.kt:64:                        MainNav { // TODO: implement it
+composeApp/src/commonMain/kotlin/di/Koin.kt:12:} // TODO: Add context later?
+composeApp/src/commonMain/kotlin/business/interactors/splash/LoginInteractor.kt:18://    ) = {TODO()}}
+composeApp/src/commonMain/kotlin/business/interactors/splash/LoginInteractor.kt:19:    ): Flow<DataState<String>> = flow { // TODO: implement DataState
+composeApp/src/commonMain/kotlin/business/interactors/splash/LoginInteractor.kt:42:            /* TODO: implement everything needed below
+composeApp/src/commonMain/kotlin/business/interactors/splash/LoginInteractor.kt:46:                                DataStoreKeys.TOKEN, // TODO: implement DataStoreKeys
+composeApp/src/commonMain/kotlin/business/interactors/splash/LoginInteractor.kt:62://            emit(handleUseCaseException(e)) // TODO: implement handleUseCaseException
+composeApp/src/commonMain/kotlin/business/interactors/splash/CheckTokenInteractor.kt:22:            val token = appDataStoreManager.readValue(DataStoreKeys.TOKEN) ?: "" // TODO: implement DataStoreKeys
+composeApp/src/commonMain/kotlin/business/interactors/splash/CheckTokenInteractor.kt:34:            emit(handleUseCaseException(e)) // TODO: implement handleUseCaseException
+composeApp/src/commonMain/kotlin/business/core/AppDataStoreManager.kt:5:const val APP_DATASTORE = "com.razzaghi.shoppingbykmp" // TODO: What is it?!
+composeApp/src/commonMain/kotlin/business/core/AppDataStoreManager.kt:7:class AppDataStoreManager(val context: Context) : AppDataStore { // TODO: implement Context
+composeApp/src/commonMain/kotlin/common/Context.kt:3:// TODO: implement Context

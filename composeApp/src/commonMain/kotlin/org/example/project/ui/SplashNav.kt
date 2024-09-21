@@ -37,6 +37,7 @@ internal fun SplashNav(
         composable(route = SplashNavigation.Login.route) {
             LoginScreen(
                 viewModel.state.value,
+                events = {},
                 navigateToMain = navigateToMain
             )
         }
