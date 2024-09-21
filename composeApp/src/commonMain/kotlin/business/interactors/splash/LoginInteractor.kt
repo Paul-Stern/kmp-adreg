@@ -2,8 +2,11 @@ package business.interactors.splash
 
 import business.core.AppDataStore
 import business.core.DataState
+import business.core.ProgressBarState
+import business.core.UIComponent
 import business.datasource.network.splash.SplashService
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flow
 
 class LoginInteractor(
     private val service: SplashService,
@@ -12,9 +15,9 @@ class LoginInteractor(
     fun execute(
         email: String,
         password: String,
-    ) = {TODO()}}
-//    ): Flow<DataState<String>> = flow { // TODO: implement DataState
-/*
+//    ) = {TODO()}}
+    ): Flow<DataState<String>> = flow { // TODO: implement DataState
+///*
         try {
 
             emit(DataState.Loading(progressBarState = ProgressBarState.ButtonLoading))
@@ -36,24 +39,27 @@ class LoginInteractor(
 
             val result = apiResponse.result
 
+            /* TODO: implement everything needed below
+            //
+                        if (result != null) {
+                            appDataStoreManager.setValue(
+                                DataStoreKeys.TOKEN,
+                                AUTHORIZATION_BEARER_TOKEN + result
+                            )
+                            appDataStoreManager.setValue(
+                                DataStoreKeys.EMAIL,
+                                email
+                            )
+                        }
 
-            if (result != null) {
-                appDataStoreManager.setValue(
-                    DataStoreKeys.TOKEN,
-                    AUTHORIZATION_BEARER_TOKEN + result
-                )
-                appDataStoreManager.setValue(
-                    DataStoreKeys.EMAIL,
-                    email
-                )
-            }
 
+                        emit(DataState.Data(result, apiResponse.status))
 
-            emit(DataState.Data(result, apiResponse.status))
+                      */
 
         } catch (e: Exception) {
             e.printStackTrace()
-            emit(handleUseCaseException(e))
+//            emit(handleUseCaseException(e)) // TODO: implement handleUseCaseException
 
         } finally {
             emit(DataState.Loading(progressBarState = ProgressBarState.Idle))
@@ -63,4 +69,3 @@ class LoginInteractor(
     }
 
 }
- */

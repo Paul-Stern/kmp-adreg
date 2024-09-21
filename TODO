@@ -1,6 +1,8 @@
 TODO: implement login procedure
  - write LoginEvent
  - implement LoginInteractor
- - implement DataState INCOMPLETE
- - implement Loading data class in DataState
+ - TODO: TODO to implement the rest --<
+ - implement UIComponent --DONE
+ - implement DataState --DONE
+ - implement Loading data class in DataState --DONE
  - implement ProgressBarState --DONE
