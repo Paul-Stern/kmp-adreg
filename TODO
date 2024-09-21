@@ -6,6 +6,12 @@ TODO:
  5. Add context to KoinApplication in app
  6. Create context param for App fun
  7. Fix error:
+> Task :composeApp:run
 Exception in thread "AWT-EventQueue-0" java.lang.IllegalArgumentException: Navigation destination that matches route Login cannot be found in the navigation graph NavGraph startDestination={Destination route=Splash}
 	at androidx.navigation.NavController.navigateInternal(NavController.jb.kt:996)
-
+	at androidx.navigation.NavController.navigate(NavController.jb.kt:1381)
+	at androidx.navigation.NavController.navigate$default(NavController.jb.kt:1376)
+	at org.example.project.ui.splash.SplashNavKt$SplashNav$1$1$1.invoke$lambda$1$lambda$0(SplashNav.kt:34)
+	at org.example.project.ui.SplashScreenKt$SplashScreen$1$1.invokeSuspend(SplashScreen.kt:35)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
