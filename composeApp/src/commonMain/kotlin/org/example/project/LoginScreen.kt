@@ -5,9 +5,11 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material.MaterialTheme
+import androidx.compose.material.IconButton
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.material.TextField
+import androidx.compose.material3.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -20,13 +22,6 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
-import kotlinproject.composeapp.generated.resources.Res
-import kotlinproject.composeapp.generated.resources.app_name
-import kotlinproject.composeapp.generated.resources.auth
-import kotlinproject.composeapp.generated.resources.login
-import kotlinproject.composeapp.generated.resources.login_screen
-import kotlinproject.composeapp.generated.resources.password
-import kotlinproject.composeapp.generated.resources.registry
 import org.example.project.ui.view_model.LoginState
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
@@ -34,6 +29,14 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import kotlinproject.composeapp.generated.resources.*
+import kotlinproject.composeapp.generated.resources.Res
+import kotlinproject.composeapp.generated.resources.auth
+import kotlinproject.composeapp.generated.resources.login
+import kotlinproject.composeapp.generated.resources.login_screen
+import kotlinproject.composeapp.generated.resources.password
+import kotlinproject.composeapp.generated.resources.registry
+import org.jetbrains.compose.resources.painterResource
 
 // Taken from:
 // https://github.com/JetBrains/compose-multiplatform/blob/a6961385ccf0dee7b6d31e3f73d2c8ef91005f1a/examples/nav_cupcake/composeApp/src/commonMain/kotlin/org/jetbrains/nav_cupcake/CupcakeScreen.kt#L50
@@ -125,6 +128,24 @@ fun PasswordField(
         visualTransformation = when (isPasswordVisible.value) {
             true -> VisualTransformation.None
             false -> PasswordVisualTransformation()
+        },
+        trailingIcon = {
+            IconButton(onClick = {
+                isPasswordVisible.value = !isPasswordVisible.value
+            }) {
+                   when (isPasswordVisible.value) {
+                       true -> Icon(
+                           painter = painterResource(Res.drawable.ic_password_hide),
+                           contentDescription = null,
+                           tint = MaterialTheme.colorScheme.primary
+                       )
+                       false -> Icon(
+                           painter = painterResource(Res.drawable.ic_password_show),
+                           contentDescription = null,
+                           tint = MaterialTheme.colorScheme.surfaceTint // TODO: choose a color
+                       )
+            }
+            }
         }
     )
 }
