@@ -10,7 +10,7 @@ import kotlinx.coroutines.flow.flow
 
 class LoginInteractor(
     private val service: SplashService,
-    private val appDataStoroManager: AppDataStore
+    private val appDataStoreManager: AppDataStore
 ) {
     fun execute(
         email: String,
@@ -43,7 +43,7 @@ class LoginInteractor(
             //
                         if (result != null) {
                             appDataStoreManager.setValue(
-                                DataStoreKeys.TOKEN,
+                                DataStoreKeys.TOKEN, // TODO: implement DataStoreKeys
                                 AUTHORIZATION_BEARER_TOKEN + result
                             )
                             appDataStoreManager.setValue(
