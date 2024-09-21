@@ -1,8 +1,4 @@
 TODO: implement login procedure
- - Write LoginEvent
- - implement AppDataStore
- - implement SplashService
- - implement MainGenericResponse --DONE?
- - Make use of @Serializable annotation --DONE
- - Resolve kotlin-serialization deps --DONE
-
+ - write LoginEvent
+ - implement LoginInteractor
+ - implement DataState --<

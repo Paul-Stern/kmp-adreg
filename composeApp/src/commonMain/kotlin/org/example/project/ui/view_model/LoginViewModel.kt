@@ -5,7 +5,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 
 class LoginViewModel(
-//    private val loginInteractor: LoginInteractor, // TODO: implement
+//    private val loginInteractor: LoginInteractor, // NB TODO: implement
 ) : ViewModel() {
 
     val state: MutableState<LoginState> = mutableStateOf(LoginState())
