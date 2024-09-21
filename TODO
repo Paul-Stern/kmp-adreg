@@ -5,4 +5,7 @@ TODO:
  4. Create viewModelModule in Koin
  5. Add context to KoinApplication in app
  6. Create context param for App fun
- 7. Fix deps for koin ksp compiler --<
+ 7. Fix error:
+Exception in thread "AWT-EventQueue-0" java.lang.IllegalArgumentException: Navigation destination that matches route Login cannot be found in the navigation graph NavGraph startDestination={Destination route=Splash}
+	at androidx.navigation.NavController.navigateInternal(NavController.jb.kt:996)
+

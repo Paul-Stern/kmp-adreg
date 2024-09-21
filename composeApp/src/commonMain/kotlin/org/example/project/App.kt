@@ -30,41 +30,44 @@ fun koinConfiguration() = koinApplication {
 @Composable
 fun App() {
     // see: https://insert-koin.io/docs/reference/koin-compose/compose/#koin-compose-multiplatform-vs-koin-android-jetpack-compose
-//    KoinApplication(::koinConfiguration) {
-//
-//    }
+    KoinApplication(
+        application = {
+            modules(appModule())
+        }
+    ) {
+
 //         paired with LN64
 //    LoginScreen(LoginState()) // TODO: Implement navigateToMain():
-    // TODO: Complete splash screen
-    // SEE: SpashScreen.kt file
-    MaterialTheme {
-        val navigator = rememberNavController()
+        // TODO: Complete splash screen
+        // SEE: SpashScreen.kt file
+        MaterialTheme {
+            val navigator = rememberNavController()
 
-        Box(modifier = Modifier.fillMaxSize()) {
-            NavHost(
-                navController = navigator,
-                startDestination = AppNavigation.Splash.route, // Fix: unknown parameter
-                modifier = Modifier.fillMaxSize()
-            ) {
-                composable(route = AppNavigation.Splash.route) {
-                    SplashNav(
-                        navigateToMain = {
-                            navigator.popBackStack()
+            Box(modifier = Modifier.fillMaxSize()) {
+                NavHost(
+                    navController = navigator,
+                    startDestination = AppNavigation.Splash.route, // Fix: unknown parameter
+                    modifier = Modifier.fillMaxSize()
+                ) {
+                    composable(route = AppNavigation.Splash.route) {
+                        SplashNav(
+                            navigateToMain = {
+                                navigator.popBackStack()
 //                            navigator.navigate(AppNavigation.Login.route)
-                            navigator.navigate(AppNavigation.Main.route)
-                        }
-                    )
+                                navigator.navigate(AppNavigation.Main.route)
+                            }
+                        )
 
 //                 */
-                }
-                composable(route = AppNavigation.Main.route) {
-                    MainNav { // TODO: implement it
-                        navigator.popBackStack()
-                        navigator.navigate(AppNavigation.Splash.route)
+                    }
+                    composable(route = AppNavigation.Main.route) {
+                        MainNav { // TODO: implement it
+                            navigator.popBackStack()
+                            navigator.navigate(AppNavigation.Splash.route)
+                        }
                     }
                 }
             }
         }
     }
 }
-//}
