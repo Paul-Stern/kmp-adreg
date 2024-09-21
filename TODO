@@ -1,5 +1,5 @@
 TODO: implement login procedure
  - write LoginEvent
  - implement LoginInteractor
- - implement DataState
- - implement UIComponent --<
+ - implement DataState --<
+ - implement UIComponent DONE
