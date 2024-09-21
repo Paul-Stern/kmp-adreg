@@ -51,7 +51,7 @@ enum class RegistryScreen (val title: StringResource) {
 @Preview
 fun LoginScreen(
     state: LoginState,
-//    navigateToMain: () -> Unit,
+    navigateToMain: () -> Unit,
     navController: NavHostController = rememberNavController()
 ) {
     // Get current back stack entry
@@ -63,7 +63,7 @@ fun LoginScreen(
 
     LaunchedEffect(state.navigateToMain) {
         if (state.navigateToMain) {
-//             navigateToMain() // TODO: Wait until implemented in App.kt
+             navigateToMain() // TODO: Wait until implemented in App.kt
         }
     }
 
