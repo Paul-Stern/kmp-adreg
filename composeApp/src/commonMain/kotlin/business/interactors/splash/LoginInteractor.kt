@@ -5,13 +5,13 @@ import business.datasource.network.splash.SplashService
 import kotlinx.coroutines.flow.Flow
 
 class LoginInteractor(
-    private val service: SplashService
+    private val service: SplashService,
     private val appDataStoroManager: AppDataStore
 ) {
     fun execute(
         email: String,
         password: String,
-    ) = {}}
+    ) = {TODO()}}
 //    ): Flow<DataState<String>> = flow { // TODO: implement DataState
 /*
         try {
