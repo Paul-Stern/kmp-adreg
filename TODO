@@ -5,8 +5,4 @@ TODO:
  4. Create viewModelModule in Koin
  5. Add context to KoinApplication in app
  6. Create context param for App fun
- 7. Fix runtime error: --<
-Exception in thread "main" java.lang.IllegalStateException: KoinApplication has not been started
-	at org.koin.core.context.GlobalContext.get(GlobalContext.kt:36)
-	at org.koin.compose.KoinApplicationKt.getDefaultKoinContext(KoinApplication.kt:51)
-	at org.koin.compose.KoinApplicationKt.currentKoinScope(KoinApplication.kt:85)
+ 7. Fix deps for koin ksp compiler --<

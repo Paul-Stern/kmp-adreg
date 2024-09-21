@@ -23,18 +23,17 @@ import javax.lang.model.type.NullType
 import javax.naming.Context
 
 fun koinConfiguration() = koinApplication {
-    modules()
+    modules(appModule())
 }
 
-@Composable
 //internal fun App(context: Context) { // TODO: Create common.context to use here
-internal fun App() {
+@Composable
+fun App() {
     // see: https://insert-koin.io/docs/reference/koin-compose/compose/#koin-compose-multiplatform-vs-koin-android-jetpack-compose
-    KoinApplication(application = {
-        modules(appModule()) // TODO: add context
-    }) {
-        // paired with LN64
-    }
+//    KoinApplication(::koinConfiguration) {
+//
+//    }
+//         paired with LN64
 //    LoginScreen(LoginState()) // TODO: Implement navigateToMain():
     // TODO: Complete splash screen
     // SEE: SpashScreen.kt file

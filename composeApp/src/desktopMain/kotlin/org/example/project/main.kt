@@ -2,6 +2,7 @@ package org.example.project
 
 import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
+import di.appModule
 import kotlinproject.composeapp.generated.resources.Res
 import kotlinproject.composeapp.generated.resources.app_name
 import org.jetbrains.compose.resources.stringResource

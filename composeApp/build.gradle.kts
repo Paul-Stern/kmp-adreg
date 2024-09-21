@@ -79,13 +79,15 @@ kotlin {
 //            implementation(libs.compose.navigation)
             // Koin:
             implementation(project.dependencies.platform(libs.koin.bom))
-            api(libs.koin.core)
-            api(libs.koin.annotations)
+            implementation(libs.koin.core)
+            implementation(libs.koin.annotations)
             implementation(libs.koin.compose)
             implementation(libs.koin.compose.viewmodel.navigation)
+//            implementation(libs.koin.ksp.compiler)
             implementation(kotlin("stdlib-jdk8"))
             // Koin Annotations KSP Compiler
             implementation("com.google.devtools.ksp:symbol-processing-api:$kspVersion")
+//            ksp(libs.koin.ksp.compiler)
             // Koin Annotations
 //            api("io.insert-koin:koin-annotations:$koin_annotations_version")
         }
@@ -111,14 +113,14 @@ dependencies {
 
      */
 }
-/*
+///*
 // see: https://insert-koin.io/docs/setup/annotations#kotlin--multiplatform
 project.tasks.withType(KotlinCompilationTask::class.java).configureEach {
     if(name != "kspCommonMainKotlinMetadata") {
         dependsOn("kspCommonMainKotlinMetadata")
     }
 }
- */
+// */
 
 
 compose.desktop {

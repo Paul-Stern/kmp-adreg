@@ -34,6 +34,7 @@ koin-bom = { group = "io.insert-koin", name = "koin-bom", version.ref = "koin-bo
 koin-core = { module = "io.insert-koin:koin-core" }
 # Koin Annotations
 #koin-annotations = { module = "io.insert-koin:koin-annotations"}
+koin-annotations-bom = { group ="io.insert-koin", name = "koin-annotations-bom" , version.ref = "koin-annotations-bom"}
 koin-annotations = { group ="io.insert-koin", name = "koin-annotations" , version.ref = "koin-annotations"}
 koin-compose = { module = "io.insert-koin:koin-compose" }
 koin-compose-viewmodel-navigation = { group = "io.insert-koin", name = "koin-compose-viewmodel-navigation" }
