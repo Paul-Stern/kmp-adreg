@@ -113,14 +113,14 @@ dependencies {
 
      */
 }
-///*
+/*
 // see: https://insert-koin.io/docs/setup/annotations#kotlin--multiplatform
 project.tasks.withType(KotlinCompilationTask::class.java).configureEach {
     if(name != "kspCommonMainKotlinMetadata") {
         dependsOn("kspCommonMainKotlinMetadata")
     }
 }
-// */
+ */
 
 
 compose.desktop {
