@@ -11,6 +11,8 @@ plugins {
     alias(libs.plugins.compose.compiler)
     // see: https://kotlinlang.org/docs/ksp-quickstart.html
     alias(libs.plugins.ksp)
+    kotlin("plugin.serialization") version "2.0.20"
+//    alias(libs.plugins.serialization)
 //    id("com.google.devtools.ksp") version "2.0.20-1.0.24"
 //    kotlin("jvm")
 }
@@ -90,6 +92,8 @@ kotlin {
 //            ksp(libs.koin.ksp.compiler)
             // Koin Annotations
 //            api("io.insert-koin:koin-annotations:$koin_annotations_version")
+//            implementation(libs.kotlinx.serialization.json)
+            implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.3")
         }
             commonMain.configure {
                 kotlin.srcDir("build/generated/ksp/metadata/commonMain/kotlin")
