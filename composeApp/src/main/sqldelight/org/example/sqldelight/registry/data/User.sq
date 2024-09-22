@@ -1,0 +1,10 @@
+-- see: https://cashapp.github.io/sqldelight/2.0.2/multiplatform_sqlite/
+
+CREATE TABLE registryUser (
+    id INTEGER PRIMARY KEY NOT NULL
+    login TEXT NOT NULL
+    password TEXT NOT NULL
+);
+
+INSERT INTO registryUser (id, login, password)
+VALUES (-1, 'test', 'test')
