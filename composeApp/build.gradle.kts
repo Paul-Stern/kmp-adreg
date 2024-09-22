@@ -94,6 +94,10 @@ kotlin {
 //            api("io.insert-koin:koin-annotations:$koin_annotations_version")
 //            implementation(libs.kotlinx.serialization.json)
             implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.3")
+            // DataStore
+            // see: https://developer.android.com/jetpack/androidx/releases/datastore
+            // see: https://search.brave.com/search?q=kotlin+datastore+use+sqlite+db&source=web&summary=1&summary_og=27ccc0c0e822cc98cb91c9:w
+            implementation("androidx.datastore:datastore-preferences:1.1.1")
         }
             commonMain.configure {
                 kotlin.srcDir("build/generated/ksp/metadata/commonMain/kotlin")
