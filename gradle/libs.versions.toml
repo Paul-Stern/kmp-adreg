@@ -21,6 +21,7 @@ viewModelVersion = "2.6.2"
 #material = "1.6.0-alpha07"
 #material3 = "1.2.0-alpha09"
 # Above, see: Kotlin Multiplatform by Tutorials 2nd ed.
+sqlDelight = "2.0.2"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -48,6 +49,8 @@ compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = 
 compose-viewmodel = {module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref="viewModelVersion" }
 androidx-compose-foundation = { group = "androidx.compose.foundation", name = "foundation" }
 
+native-driver = { module = "app.cash.sqldelight:native-driver", version.ref = "sqlDelight" }
+
 [plugins]
 jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
@@ -57,6 +60,7 @@ jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "k
 #jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android"}
 ksp = {id = "com.google.devtools.ksp", version.ref = "ksp" }
 serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlinx-serialization" }
+sqldelight = { id = "app.cash.sqldelight", version.ref = "sqlDelight" }
 
 [bundles]
 #material = ["material-icons", "material-iconsExtended", "material", "material3"]

@@ -12,6 +12,7 @@ plugins {
     // see: https://kotlinlang.org/docs/ksp-quickstart.html
     alias(libs.plugins.ksp)
     kotlin("plugin.serialization") version "2.0.20"
+    alias(libs.plugins.sqldelight)
 //    alias(libs.plugins.serialization)
 //    id("com.google.devtools.ksp") version "2.0.20-1.0.24"
 //    kotlin("jvm")
@@ -99,13 +100,19 @@ kotlin {
             // see: https://search.brave.com/search?q=kotlin+datastore+use+sqlite+db&source=web&summary=1&summary_og=27ccc0c0e822cc98cb91c9:w
             implementation("androidx.datastore:datastore-preferences:1.1.1")
         }
-            commonMain.configure {
-                kotlin.srcDir("build/generated/ksp/metadata/commonMain/kotlin")
-            }
+        commonMain.configure {
+            kotlin.srcDir("build/generated/ksp/metadata/commonMain/kotlin")
+        }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
             implementation(libs.kotlinx.coroutines.swing)
         }
+        /*
+        androidMain.dependencies {
+            implementation(libs.native.driver)
+        }
+
+         */
     }
 
 }
@@ -139,6 +146,16 @@ compose.desktop {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
             packageName = "org.example.project"
             packageVersion = "1.0.0"
+        }
+    }
+}
+
+// see: https://cashapp.github.io/sqldelight/2.0.2/multiplatform_sqlite/
+
+sqldelight {
+    databases {
+        create("Database") {
+            packageName.set("org.example")
         }
     }
 }
