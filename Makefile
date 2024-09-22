@@ -5,3 +5,6 @@ draft-push-gh:
 
 to-be-done:
 	grep -rn TODO composeApp/src > TODO.machine
+
+start: 
+	date > TIME && git commit TIME -m "time: start stamp"
