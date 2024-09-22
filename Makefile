@@ -1,5 +1,5 @@
 now:
-	git status && cat TODO | grcat
+	git status && cat TODO
 draft-push-gh:
 	git push gh draft
 
