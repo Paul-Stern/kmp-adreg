@@ -6,4 +6,5 @@ TODO: implement login procedure
  - implement CheckTokenInteractor
  - implement LoginEvent Login
  - implement SQLiteDataStore
- - implement SQLiteOpenHelper --<
+ - implement SQLiteOpenHelper
+ - make use of SQLDelight --<
