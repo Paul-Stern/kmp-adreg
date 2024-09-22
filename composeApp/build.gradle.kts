@@ -67,7 +67,6 @@ kotlin {
 
     sourceSets {
         val desktopMain by getting
-        val koin_annotations_version = "1.3.1"
         commonMain.dependencies {
             implementation(compose.runtime)
             implementation(compose.foundation)
@@ -106,6 +105,9 @@ kotlin {
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
             implementation(libs.kotlinx.coroutines.swing)
+        }
+        nativeMain.dependencies {
+            implementation(libs.native.driver)
         }
         /*
         androidMain.dependencies {
