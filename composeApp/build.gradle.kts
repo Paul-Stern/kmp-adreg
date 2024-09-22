@@ -102,6 +102,9 @@ kotlin {
         commonMain.configure {
             kotlin.srcDir("build/generated/ksp/metadata/commonMain/kotlin")
         }
+        jvmMain.dependencies {
+            implementation(libs.native.driver)
+        }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
             implementation(libs.kotlinx.coroutines.swing)
