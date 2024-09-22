@@ -7,4 +7,10 @@ TODO: implement login procedure
  - implement LoginEvent Login
  - implement SQLiteDataStore
  - implement SQLiteOpenHelper
- - make use of SQLDelight --<
+ - make use of SQLDelight
+ - create JvmSqliteDriver --<
+ - create common DriverFactory interface DONE
+ - run generateSqldelight... task. Build complete DONE
+ - define Users.sq sqldelight schema DONE
+ - create data class Entity (for future?) DONE
+ - Make changes to build configuration for sqldelight DONE

@@ -1,0 +1,24 @@
+-- see: https://cashapp.github.io/sqldelight/2.0.2/multiplatform_sqlite/
+
+CREATE TABLE registryUsers (
+    id INTEGER PRIMARY KEY NOT NULL
+    login TEXT NOT NULL
+    password TEXT NOT NULL
+);
+
+INSERT INTO registryUsers (id, login, password)
+VALUES (-1, 'test', 'test')
+
+selectUsers:
+SELECT id, login
+FROM registryUsers;
+
+insertUser:
+INSERT INTO registryUsers (login, password)
+VALUES (:login, :password)
+
+authenticateUser:
+SELECT id
+FROM registryUsers
+WHERE login = :login
+  AND password = :password;

@@ -159,8 +159,8 @@ compose.desktop {
 
 sqldelight {
     databases {
-        create("Database") {
-            packageName.set("org.example")
+        create("Users") {
+            packageName.set("org.example.project.db")
         }
     }
 }
