@@ -104,10 +104,12 @@ kotlin {
         }
         jvmMain.dependencies {
             implementation(libs.native.driver)
+            implementation("app.cash.sqldelight:sqlite-driver:2.0.2")
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
             implementation(libs.kotlinx.coroutines.swing)
+            implementation("app.cash.sqldelight:sqlite-driver:2.0.2")
         }
         nativeMain.dependencies {
             implementation(libs.native.driver)
