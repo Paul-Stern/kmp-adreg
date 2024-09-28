@@ -7,5 +7,6 @@ TODO: implement login procedure
  - implement LoginEvent Login
  - implement SQLiteDataStore
  - implement SQLiteOpenHelper
- - make use of SQLDelight --<
+ - make use of SQLDelight
+ - follow: https://www.jetbrains.com/help/kotlin-multiplatform-dev/multiplatform-ktor-sqldelight.html#configure-sqldelight-and-implement-cache-logic --<
  - create DesktopSqliteDriver DONE
