@@ -7,6 +7,9 @@ internal class Database (dbDriverFactory: DatabaseDriverFactory) {
     private val db = AppDatabase(dbDriverFactory.createDriver())
     private val dbQuery = db.appDatabaseQueries
 
+    internal fun getTestUser(): User {
+        return dbQuery.selectTestUser(::mapUserSelecting).executeAsOne()
+    }
 //    /*
     internal fun getAllUsers(): List<User> {
         return dbQuery.selectAllUsers(::mapUserSelecting).executeAsList()
