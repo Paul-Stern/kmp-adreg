@@ -9,8 +9,8 @@ CREATE TABLE registryUsers (
 INSERT INTO registryUsers (id, userLogin, userPassword)
 VALUES (-1, 'test', 'test');
 
-selectUsers:
-SELECT registryUsers.id, userLogin
+selectAllUsers:
+SELECT registryUsers.*
 FROM registryUsers;
 
 insertUser:
