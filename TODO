@@ -7,10 +7,10 @@ TODO: implement login procedure
  - implement LoginEvent Login
  - implement SQLiteDataStore
  - implement SQLiteOpenHelper
- - fix broken password field --<
  - make use of SQLDelight
  - follow: https://www.jetbrains.com/help/kotlin-multiplatform-dev/multiplatform-ktor-sqldelight.html#configure-sqldelight-and-implement-cache-logic
  - implement SDK
  - implement db API
  - implement db logic PARTIALLY DONE
- - fix build DONE
+ - fix broken password field
+ - check out reference project  --<
