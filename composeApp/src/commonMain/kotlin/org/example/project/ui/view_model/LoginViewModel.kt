@@ -7,7 +7,7 @@ import business.interactors.splash.LoginInteractor
 
 class LoginViewModel(
 //    private val loginInteractor: LoginInteractor, // NB TODO: implement
-//    private val checkTokenInteractor: CheckTokenInteractor, // TODO: implement
+//    private val checkTokenInteractor: CheckTokenInteractor, // TODO: implement --<
 ) : ViewModel() {
 
     val state: MutableState<LoginState> = mutableStateOf(LoginState())
@@ -34,6 +34,7 @@ class LoginViewModel(
 
         }
     }
+
 
 
     private fun onUpdatePasswordLogin(value: String) {

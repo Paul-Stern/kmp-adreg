@@ -19,6 +19,7 @@ class CheckTokenInteractor(
             emit(DataState.Loading(progressBarState = ProgressBarState.ButtonLoading))
 
 
+// TODO: for DataStoreKeys see: https://github.com/search?q=repo%3Arazaghimahdi/Shopping-By-KMP%20DataStoreKeys&type=code
             val token = appDataStoreManager.readValue(DataStoreKeys.TOKEN) ?: "" // TODO: implement DataStoreKeys
 
 
