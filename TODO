@@ -9,4 +9,5 @@ TODO: implement login procedure
  - implement SQLiteOpenHelper
  - make use of SQLDelight
  - follow: https://www.jetbrains.com/help/kotlin-multiplatform-dev/multiplatform-ktor-sqldelight.html#configure-sqldelight-and-implement-cache-logic
- - implement db logic --<
+ - implement db logic
+ - implement db API, create db methods --<
