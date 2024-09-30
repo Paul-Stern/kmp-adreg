@@ -11,3 +11,4 @@ TODO: implement login procedure
  - follow: https://www.jetbrains.com/help/kotlin-multiplatform-dev/multiplatform-ktor-sqldelight.html#configure-sqldelight-and-implement-cache-logic
  - implement db logic
  - implement db API, create db methods --<
+ - fix build DONE
