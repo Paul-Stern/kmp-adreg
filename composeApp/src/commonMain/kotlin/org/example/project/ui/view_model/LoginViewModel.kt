@@ -35,10 +35,16 @@ class LoginViewModel(
         }
     }
 
+    init {
+        checkToken()
+    }
 
 
     private fun onUpdatePasswordLogin(value: String) {
         state.value = state.value.copy(passwordLogin = value)
+    }
+
+    private fun checkToken() {
     }
 
     /*
