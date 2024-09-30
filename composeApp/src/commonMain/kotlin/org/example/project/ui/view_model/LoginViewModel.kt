@@ -12,6 +12,7 @@ class LoginViewModel(
 
     val state: MutableState<LoginState> = mutableStateOf(LoginState())
 
+    // TODO: finish LoginViewModel
     /*
     private fun checkToken() {
         checkTokenInteractor.execute().onEach { dataState ->
