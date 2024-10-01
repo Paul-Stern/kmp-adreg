@@ -13,6 +13,7 @@ TODO: implement login procedure
  - implement db API
  - implement db logic PARTIALLY DONE
  - fix broken password field
- - check out reference project  --<
- - fix LoginViewModel --<
+ - check out reference project
+ - fix LoginViewModel
    - see: https://github.com/razaghimahdi/Shopping-By-KMP/blob/master/shared/src/commonMain/kotlin/presentation/ui/splash/view_model/LoginViewModel.kt
+ - IDEA use standard and basic methods for handling field input --<
