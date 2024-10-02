@@ -5,6 +5,8 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import business.interactors.splash.LoginInteractor
 
+// see: https://github.com/razaghimahdi/Shopping-By-KMP/blob/master/shared/src/commonMain/kotlin/presentation/ui/splash/view_model/LoginViewModel.kt
+
 class LoginViewModel(
 //    private val loginInteractor: LoginInteractor, // NB TODO: implement
 //    private val checkTokenInteractor: CheckTokenInteractor, // TODO: implement --<
