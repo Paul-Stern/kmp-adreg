@@ -49,6 +49,10 @@ class LoginViewModel(
     private fun checkToken() {
     }
 
+    private fun checkLoginToken(state: LoginState) {
+
+    }
+
     /*
     private fun onUpdateNameRegister(value: String) {
         state.value = state.value.copy(nameRegister = value)

@@ -76,6 +76,7 @@ fun LoginScreen(
     var showContent by remember { mutableStateOf(false) }
     var login by remember { mutableStateOf("") }
     var pass by remember { mutableStateOf("") }
+    // TODO: add login button
     MaterialTheme {
         Column(
             Modifier.fillMaxHeight().fillMaxWidth(),
