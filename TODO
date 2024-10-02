@@ -14,6 +14,7 @@ TODO: implement login procedure
  - implement SDK
  - implement db API
  - implement db logic PARTIALLY DONE
+ - fix Koin --<
  - fix broken password field
  - check out reference project
  - fix LoginViewModel
@@ -21,4 +22,4 @@ TODO: implement login procedure
  - IDEA use standard and basic methods for handling field input, or
  - fix current input handling method WORKAROUND
  - IDEA sql check username/pass in sqlite?
- - create sql select to get username and pass --<
+ - create sql select to get username and pass
