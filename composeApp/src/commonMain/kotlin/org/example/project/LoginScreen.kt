@@ -84,12 +84,16 @@ fun LoginScreen(
             Text(text = stringResource(Res.string.auth))
             LoginField(
                 value = login,
-                onValueChange = { login = it }
+                onValueChange = {
+                    login = it
+                    state.usernameLogin = login
+                }
             )
             PasswordField(
-                value = state.passwordLogin,
+                value = pass,
                 onValueChange = {
-                    events(LoginEvent.OnUpdatePasswordLogin(it))
+                    pass = it
+                    state.passwordLogin = pass
                 },
             )
 

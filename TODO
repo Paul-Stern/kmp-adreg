@@ -1,6 +1,6 @@
 TODO: implement login procedure
  - create and navigate to main and home screens
- - login as 'test'
+ - login as 'test' --<
  - write LoginEvent
  - implement LoginInteractor
  - TODO: TODO to implement the rest
@@ -19,5 +19,5 @@ TODO: implement login procedure
  - fix LoginViewModel
    - see: https://github.com/razaghimahdi/Shopping-By-KMP/blob/master/shared/src/commonMain/kotlin/presentation/ui/splash/view_model/LoginViewModel.kt
  - IDEA use standard and basic methods for handling field input, or
- - fix current input handling method
- - use log and pass as vars in LoginState --<
+ - fix current input handling method WORKAROUND
+ - use log and pass as vars in LoginState DONE
