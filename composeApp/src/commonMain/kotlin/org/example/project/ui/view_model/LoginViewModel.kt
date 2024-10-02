@@ -51,8 +51,7 @@ class LoginViewModel(
     }
 
     private fun loginDataOk(state: LoginState): Boolean {
-        val result = state.usernameLogin == "test" && state.passwordLogin == "test"
-        return result
+        return state.usernameLogin == "test" && state.passwordLogin == "test"
     }
 
 /*
