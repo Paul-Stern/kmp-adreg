@@ -22,12 +22,4 @@ TODO: implement login procedure
  - READ Kotlin book in your mother tongue
  - READ kmp introduction on jetbrains website
  	all these (5 for now) sources together may help fix the problems you face
- - fix settings multiplatform deps DONE
- - fix broken password field DONE
- - check out reference project
- - fix LoginViewModel
-   - see: https://github.com/razaghimahdi/Shopping-By-KMP/blob/master/shared/src/commonMain/kotlin/presentation/ui/splash/view_model/LoginViewModel.kt
- - IDEA use standard and basic methods for handling field input, or
- - fix current input handling method WORKAROUND
- - IDEA sql check username/pass in sqlite?
- - create sql select to get username and pass
+ - make use of and fix database driver factories --<
