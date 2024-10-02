@@ -30,6 +30,7 @@ class LoginViewModel(
             is LoginEvent.OnUpdatePasswordLogin -> {
                 onUpdatePasswordLogin(event.value)
             }
+
             else -> {
                 TODO()
             }
@@ -49,38 +50,39 @@ class LoginViewModel(
     private fun checkToken() {
     }
 
-    private fun checkLoginToken(state: LoginState) {
-
+    private fun loginDataOk(state: LoginState): Boolean {
+        val result = state.usernameLogin == "test" && state.passwordLogin == "test"
+        return result
     }
 
-    /*
-    private fun onUpdateNameRegister(value: String) {
-        state.value = state.value.copy(nameRegister = value)
-    }
+/*
+private fun onUpdateNameRegister(value: String) {
+    state.value = state.value.copy(nameRegister = value)
+}
 
-     */
+ */
 
 
-    /*
-    private fun checkToken() {
-        checkTokenInteractor.execute().onEach { dataState ->
-            when (dataState) {
-                is DataState.NetworkStatus -> {}
-                is DataState.Response -> {
-                    onTriggerEvent(LoginEvent.Error(dataState.uiComponent))
-                }
-
-                is DataState.Data -> {
-                    state.value = state.value.copy(isTokenValid = dataState.data ?: false)
-                    state.value = state.value.copy(navigateToMain = dataState.data ?: false)
-                }
-
-                is DataState.Loading -> {
-                    state.value =
-                        state.value.copy(progressBarState = dataState.progressBarState)
-                }
+/*
+private fun checkToken() {
+    checkTokenInteractor.execute().onEach { dataState ->
+        when (dataState) {
+            is DataState.NetworkStatus -> {}
+            is DataState.Response -> {
+                onTriggerEvent(LoginEvent.Error(dataState.uiComponent))
             }
-        }.launchIn(viewModelScope)
-    }
-     */
+
+            is DataState.Data -> {
+                state.value = state.value.copy(isTokenValid = dataState.data ?: false)
+                state.value = state.value.copy(navigateToMain = dataState.data ?: false)
+            }
+
+            is DataState.Loading -> {
+                state.value =
+                    state.value.copy(progressBarState = dataState.progressBarState)
+            }
+        }
+    }.launchIn(viewModelScope)
+}
+ */
 }
