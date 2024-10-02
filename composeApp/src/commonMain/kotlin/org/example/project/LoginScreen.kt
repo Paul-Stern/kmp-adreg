@@ -99,7 +99,12 @@ fun LoginScreen(
                 },
                 onDone = { // TODO: see LoginViewModel
                     // Should look like this?
-                    events(LoginEvent.Login)
+                    if (
+                        state.usernameLogin == "test"
+                        && state.passwordLogin == "test"
+                    ) {
+                        navigateToMain()
+                    }
                 }
             )
 
