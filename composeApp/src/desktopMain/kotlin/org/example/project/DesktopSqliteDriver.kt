@@ -8,8 +8,8 @@ import org.example.project.db.AppDatabase
 
 //import org.example.Use
 
-class DesktopDriverFactory {
-    fun createDriver(): SqlDriver {
+class DesktopDriverFactory: DatabaseDriverFactory {
+    override fun createDriver(): SqlDriver {
         val driver: SqlDriver = JdbcSqliteDriver(JdbcSqliteDriver.IN_MEMORY)
         AppDatabase.Schema.create(driver)
         return driver
