@@ -16,3 +16,4 @@ fun viewModelModule() =
     module {
 //        viewModelOf(::BasicViewModel)
     }
+//expect val platformModule: Module
