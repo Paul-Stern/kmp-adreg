@@ -20,4 +20,5 @@ TODO: implement login procedure
    - see: https://github.com/razaghimahdi/Shopping-By-KMP/blob/master/shared/src/commonMain/kotlin/presentation/ui/splash/view_model/LoginViewModel.kt
  - IDEA use standard and basic methods for handling field input, or
  - fix current input handling method WORKAROUND
- - use log and pass as vars in LoginState DONE
+ - IDEA sql check username/pass in sqlite?
+ - create sql select to get username and pass --<
