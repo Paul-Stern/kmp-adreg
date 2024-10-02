@@ -98,7 +98,8 @@ fun LoginScreen(
                     state.passwordLogin = pass
                 },
                 onDone = { // TODO: see LoginViewModel
-
+                    // Should look like this?
+                    events(LoginEvent.Login)
                 }
             )
 

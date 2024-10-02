@@ -50,7 +50,8 @@ class LoginViewModel(
     private fun checkToken() {
     }
 
-    private fun loginDataOk(state: LoginState): Boolean {
+    // TODO: make private and refactor
+    public fun loginDataOk(state: LoginState): Boolean {
         return state.usernameLogin == "test" && state.passwordLogin == "test"
     }
 
