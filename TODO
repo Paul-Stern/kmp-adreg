@@ -22,4 +22,5 @@ TODO: implement login procedure
  - READ Kotlin book in your mother tongue
  - READ kmp introduction on jetbrains website
  	all these (5 for now) sources together may help fix the problems you face
+ - READ koin docs: https://insert-koin.io/docs/reference/koin-compose/compose
  - make use of and fix database driver factories --<
