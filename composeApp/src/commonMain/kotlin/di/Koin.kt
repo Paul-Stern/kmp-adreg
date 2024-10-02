@@ -8,7 +8,7 @@ import org.koin.core.module.dsl.viewModelOf
 import org.koin.dsl.module
 
 fun appModule() = module{
-    factory { LoginViewModel(dbSDK = get()) }
+    factory { LoginViewModel() }
 } // TODO: Add context later?
 
 // see: https://github.com/muazkadan/CMP-News-App/blob/main/composeApp/src/commonMain/kotlin/di/Koin.kt
@@ -16,4 +16,3 @@ fun viewModelModule() =
     module {
 //        viewModelOf(::BasicViewModel)
     }
-//expect val platformModule: Module

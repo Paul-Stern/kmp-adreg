@@ -12,7 +12,7 @@ import org.example.project.db.RegistrySDK
 class LoginViewModel(
 //    private val loginInteractor: LoginInteractor, // NB TODO: implement
 //    private val checkTokenInteractor: CheckTokenInteractor, // TODO: implement --<
-    internal val dbSDK: RegistrySDK
+//    internal val dbSDK: RegistrySDK
 ) : ViewModel() {
 
     val state: MutableState<LoginState> = mutableStateOf(LoginState())
@@ -28,15 +28,7 @@ class LoginViewModel(
 
             is LoginEvent.Login -> {
 //                dbSDK.getUser()
-                if (
-                    authenticateUser(
-                        state.value.usernameLogin,
-                        state.value.passwordLogin
-                    )
-                ) {
-
-                }
-                    TODO()
+                TODO()
             }
 
             is LoginEvent.OnUpdatePasswordLogin -> {
@@ -67,10 +59,13 @@ class LoginViewModel(
         return state.usernameLogin == "test" && state.passwordLogin == "test"
     }
 
+    /* TODO: add SDK somewhere in stack
     private suspend fun authenticateUser(name: String, pass: String): Boolean {
         val user = dbSDK.getUser(name, true)
         return user.pass == pass
     }
+
+     */
 
     /*
         private fun currentUser() {

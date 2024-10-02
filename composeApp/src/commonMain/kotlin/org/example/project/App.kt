@@ -13,6 +13,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import di.appModule
+import org.example.project.db.RegistrySDK
+import org.example.project.db.common.DatabaseDriverFactory
 import org.example.project.navigation.AppNavigation
 import org.example.project.ui.main.MainNav
 import org.example.project.ui.splash.SplashNav
