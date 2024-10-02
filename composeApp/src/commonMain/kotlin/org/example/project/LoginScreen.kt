@@ -98,11 +98,7 @@ fun LoginScreen(
                     state.passwordLogin = pass
                 },
                 onDone = { // TODO: see LoginViewModel
-                    // Should look like this?
-                    if (
-                        state.usernameLogin == "test"
-                        && state.passwordLogin == "test"
-                    ) {
+                    if (loginPairOk(state)){
                         navigateToMain()
                     }
                 }
@@ -172,4 +168,8 @@ fun PasswordField(
             }
         }
     )
+}
+
+fun loginPairOk(state: LoginState): Boolean {
+   return state.usernameLogin == "test" && state.passwordLogin == "test"
 }
