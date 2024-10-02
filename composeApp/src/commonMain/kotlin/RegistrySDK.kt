@@ -5,11 +5,11 @@ import org.example.project.db.common.Database
 import org.example.project.db.common.DatabaseDriverFactory
 import kotlin.jvm.Throws
 
-class RegistrySDK (databaseDriverFactory: DatabaseDriverFactory) {
+class RegistrySDK(databaseDriverFactory: DatabaseDriverFactory) {
     private val db = Database(databaseDriverFactory)
 
     @Throws(Exception::class)
-    suspend fun getUsers(forceReload: Boolean):  List<User> {
+    suspend fun getUsers(forceReload: Boolean): List<User> {
         val cachedUsers = db.getAllUsers()
         return if (cachedUsers.isNotEmpty() && !forceReload) {
             cachedUsers
@@ -18,15 +18,15 @@ class RegistrySDK (databaseDriverFactory: DatabaseDriverFactory) {
         }
     }
 
-    /*
+    //    /*
     @Throws(Exception::class)
     suspend fun getUser(
         name: String,
-        pass: String,
         forceReload: Boolean
     ): User {
-        db.
+        val user = db.getUserByName(name)
+        return user
     }
 
-     */
+//     */
 }

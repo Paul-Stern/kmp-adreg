@@ -4,12 +4,14 @@ import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import business.interactors.splash.LoginInteractor
+import org.example.project.db.RegistrySDK
 
 // see: https://github.com/razaghimahdi/Shopping-By-KMP/blob/master/shared/src/commonMain/kotlin/presentation/ui/splash/view_model/LoginViewModel.kt
 
 class LoginViewModel(
 //    private val loginInteractor: LoginInteractor, // NB TODO: implement
 //    private val checkTokenInteractor: CheckTokenInteractor, // TODO: implement --<
+    internal val dbSDK: RegistrySDK
 ) : ViewModel() {
 
     val state: MutableState<LoginState> = mutableStateOf(LoginState())
@@ -24,6 +26,7 @@ class LoginViewModel(
             }
 
             is LoginEvent.Login -> {
+//                dbSDK.getUser()
                 TODO()
             }
 
