@@ -16,8 +16,14 @@ TODO: implement login procedure
  - implement db logic PARTIALLY DONE
  - fix Koin
  - create necessary module
+ - READ Dependency Injection chapter (the 9th) in Kotlin Multiplatform by Tutorials for introduction to Koin 
+ - READ insert-koin web site for introduction to Koin
+ - READ reference project
+ - READ Kotlin book in your mother tongue
+ - READ kmp introduction on jetbrains website
+ 	all these (5 for now) sources together may help fix the problems you face
  - fix settings multiplatform deps DONE
- - fix broken password field
+ - fix broken password field DONE
  - check out reference project
  - fix LoginViewModel
    - see: https://github.com/razaghimahdi/Shopping-By-KMP/blob/master/shared/src/commonMain/kotlin/presentation/ui/splash/view_model/LoginViewModel.kt
