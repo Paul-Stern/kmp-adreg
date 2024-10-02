@@ -17,4 +17,16 @@ class RegistrySDK (databaseDriverFactory: DatabaseDriverFactory) {
             db.getAllUsers() // TODO: logic seems broken see LN13
         }
     }
+
+    /*
+    @Throws(Exception::class)
+    suspend fun getUser(
+        name: String,
+        pass: String,
+        forceReload: Boolean
+    ): User {
+        db.
+    }
+
+     */
 }

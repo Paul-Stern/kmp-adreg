@@ -18,6 +18,12 @@ SELECT registryUsers.*
 FROM registryUsers
 WHERE userLogin = 'test';
 
+selectUserByName:
+SELECT ru.*
+FROM registryUsers ru
+WHERE userLogin = :userLogin;
+
+
 insertUser:
 INSERT INTO registryUsers (userLogin, userPassword)
 VALUES (:userLogin, :userPassword);
