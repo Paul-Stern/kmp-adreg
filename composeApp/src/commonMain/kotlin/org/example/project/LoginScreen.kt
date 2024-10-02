@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -125,6 +126,7 @@ fun PasswordField(
 //    onDone: () -> Unit, // maybe next time
 ) {
     val isPasswordVisible = remember { mutableStateOf(false) }
+    val callback = {} // TODO: write a callback t workaround login
     TextField(
         value = value,
         onValueChange = { onValueChange(it)},
@@ -134,6 +136,7 @@ fun PasswordField(
             imeAction = ImeAction.Done,
             keyboardType = KeyboardType.Password,
         ),
+//        keyboardActions = KeyboardActions(onDone = onDone), // TODO: fire a Login event
         visualTransformation = when (isPasswordVisible.value) {
             true -> VisualTransformation.None
             false -> PasswordVisualTransformation()
