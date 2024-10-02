@@ -96,6 +96,9 @@ fun LoginScreen(
                     pass = it
                     state.passwordLogin = pass
                 },
+                onDone = {
+
+                }
             )
 
         }
@@ -123,7 +126,7 @@ fun LoginField(
 fun PasswordField(
     value: String,
     onValueChange: (String) -> Unit,
-//    onDone: () -> Unit, // maybe next time
+    onDone: () -> Unit, // maybe next time
 ) {
     val isPasswordVisible = remember { mutableStateOf(false) }
     val callback = {} // TODO: write a callback t workaround login
@@ -136,7 +139,9 @@ fun PasswordField(
             imeAction = ImeAction.Done,
             keyboardType = KeyboardType.Password,
         ),
-//        keyboardActions = KeyboardActions(onDone = onDone), // TODO: fire a Login event
+        keyboardActions = KeyboardActions(onDone = {
+            onDone()
+        }), // TODO: fire a Login event
         visualTransformation = when (isPasswordVisible.value) {
             true -> VisualTransformation.None
             false -> PasswordVisualTransformation()
