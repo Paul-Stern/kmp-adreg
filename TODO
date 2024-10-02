@@ -14,7 +14,9 @@ TODO: implement login procedure
  - implement SDK
  - implement db API
  - implement db logic PARTIALLY DONE
- - fix Koin --<
+ - fix Koin
+ - create necessary module
+ - fix deps --<
  - fix broken password field
  - check out reference project
  - fix LoginViewModel
