@@ -9,5 +9,8 @@ to-be-done:
 start:
 	date -R > TIME && git commit TIME -m "time: start stamp"
 
+end:
+	date -R > TIME && git commit TIME -m "time: end stamp"
+
 todo:
 	git commit TODO -m "TODO: see"
