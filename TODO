@@ -16,7 +16,7 @@ TODO: implement login procedure
  - implement db logic PARTIALLY DONE
  - fix Koin
  - create necessary module
- - fix deps --<
+ - fix settings multiplatform deps DONE
  - fix broken password field
  - check out reference project
  - fix LoginViewModel

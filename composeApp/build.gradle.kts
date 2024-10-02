@@ -98,6 +98,7 @@ kotlin {
             // see: https://developer.android.com/jetpack/androidx/releases/datastore
             // see: https://search.brave.com/search?q=kotlin+datastore+use+sqlite+db&source=web&summary=1&summary_og=27ccc0c0e822cc98cb91c9:w
             implementation("androidx.datastore:datastore-preferences:1.1.1")
+            implementation("com.russhwolf:multiplatform-settings:1.2.0")
         }
         commonMain.configure {
             kotlin.srcDir("build/generated/ksp/metadata/commonMain/kotlin")
